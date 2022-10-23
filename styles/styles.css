@@ -1,0 +1,136 @@
+:root {
+  --clr-text-primary: #ececec;
+  --clr-text-secondary: #9b9b9b;
+  --clr-yellow: #eeb02a;
+  --clr-accent: #fb2576;
+  --clr-black: #1b1b1b;
+  --gradient-background: radial-gradient(
+    at top left,
+    #000000 15%,
+    #150050,
+    #3f0071,
+    #fb2576
+  );
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--gradient-background) fixed;
+  color: var(--clr-text);
+}
+
+.navbar {
+  content: "";
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 3em;
+  font-size: 1.2rem;
+  color: var(--clr-text-primary);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  border-bottom: 1px var(--clr-text-secondary) solid;
+  z-index: 500;
+}
+
+.logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.buttons > div {
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 0.2em 1em;
+  transition: all 250ms ease-in-out;
+}
+
+.buttons > div:hover {
+  border: 2px solid var(--clr-accent);
+  background-color: var(--clr-black);
+}
+
+.buttons > div > a {
+  color: var(--clr-text-primary);
+  text-decoration: none;
+}
+
+.landing {
+  margin: 11rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--clr-text-primary);
+  font-size: 6rem;
+}
+
+.hero-image {
+  bottom: -50%;
+  right: 0%;
+  position: fixed;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.hero-image > img {
+  width: 50vw;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: var(--clr-text-secondary);
+}
+
+.show-me-button {
+  margin-top: 2rem;
+  padding: 0.3em 2em;
+  font-size: 1.5rem;
+  border: 5px solid var(--clr-text-primary);
+  border-radius: 50px;
+  display: inline-block;
+  background: linear-gradient(to left, transparent 50%, var(--clr-text-primary) 50%) right;
+  background-size: 200% 100%;
+  transition: all 250ms ease-in;
+}
+
+.show-me-button:hover {
+  background-position: left;
+  border: 5px solid var(--clr-black);
+}
+
+.show-me-button > a {
+  position: relative;
+  text-decoration: none;
+  color: var(--clr-text-primary);
+}
+
+.show-me-button:hover > a {
+  color: var(--clr-black);
+}
+
+.menu-background-pattern {
+  height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%, transparent 9%);
+  background-position: 0% 0%;
+  background-size: 5vmin 5vmin;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}/*# sourceMappingURL=styles.css.map */
