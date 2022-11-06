@@ -13,3 +13,9 @@ function showGlasses(){
      hero_img.style.right  = '3%';
     }
 }
+
+const menu_toggle = document.querySelector('#mobile-hamburger');
+
+menu_toggle.addEventListener("click", ()=>{
+    menu_toggle.classList.toggle("active");
+})
